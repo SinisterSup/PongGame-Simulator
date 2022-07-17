@@ -17,6 +17,7 @@ BALL_RADIUS = 7
 WINNING_SCORE = 10
 SCORE_FONT = pygame.font.SysFont("comicsans", 45)
 
+#Object Paddle
 class Paddle:
     COLOR = WHITE
     VEL = 5
@@ -40,8 +41,9 @@ class Paddle:
         self.x = self.original_x
         self.y = self.original_y
 
+# Object BALL
 class Ball:
-    MAX_VEL = 7
+    MAX_VEL = 8
     COLOR = WHITE
 
     def __init__(self, x, y, radius):
@@ -64,7 +66,7 @@ class Ball:
         self.y_vel = 0
         self.x_vel *= -1
 
-
+# Draw on a Window Using PyGame
 def draw(wind, paddles, ball, left_score = 0, right_score = 0):
     wind.fill(BLACK)
 
